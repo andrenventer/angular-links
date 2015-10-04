@@ -14,7 +14,7 @@ app.controller('EditController', [
             });
         };
 
-        $scope.decrementRating = function (link) {
+        $scope.decrementRating = function () {
             $scope.link.rating -= 1;
         };
 
