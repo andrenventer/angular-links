@@ -16,7 +16,7 @@ app.controller('HomeController', [
         };
 
         $scope.incrementVotes = function (link) {
-            link.votes += 1;
+            link.rating += 1;
             API.update(link);
         };
 
