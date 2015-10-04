@@ -24,6 +24,7 @@ app.factory('API', [
 
         o.update = function (link) {
             return $http.put(url + link.id, link).success(function (data) {
+                o.getAll();
                 return data;
             });
         };
