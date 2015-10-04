@@ -10,7 +10,7 @@ app.factory('API', [
         o.links = [];
 
         o.getAll = function () {
-            return $http.get(url + '?by=id&order=desc').success(function (data) {
+            return $http.get(url + '?by=rating&order=desc').success(function (data) {
                 angular.copy(data, o.links);
                 return data;
             });
@@ -24,6 +24,7 @@ app.factory('API', [
 
         o.update = function (link) {
             return $http.put(url + link.id, link).success(function (data) {
+                o.getAll();
                 return data;
             });
         };
