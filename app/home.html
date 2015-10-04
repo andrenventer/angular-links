@@ -13,7 +13,7 @@
 
             <div data-ng-repeat="link in links | dataFilter:search" class="listLinks">
 
-                <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementVotes(link)">{{link.votes}}</span>
+                <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementVotes(link)">{{link.rating}}</span>
                 <a href="#/links/{{link.id}}"><span class="glyphicon glyphicon-ok-circle"></span></a>
                 <a ng-show="link.link" href="#" ng-click="select(link)">{{link.description | limitTo:24 }}</a>
                 <span ng-hide="link.link">{{link.description}}</span>
